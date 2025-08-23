@@ -8,7 +8,9 @@ const Admissions = () => {
           Admission Process
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Getting started with Amity University Online is simple. Follow these
+          Getting started with  <a href="https://vidyarishi.com/" target="_blank" rel="noopener noreferrer ">
+                Amity University Online
+              </a> is simple. Follow these
           easy steps to secure your admission and begin your learning journey.
         </p>
 

@@ -140,9 +140,7 @@ const Footer = () => {
               Images used are for illustrative purposes and do not directly represent
               the respective colleges or universities.
             </p>
-            <a href="#" className="hover:text-[#FFCC00] text-sm mb-2 block">
-              Privacy & Policy
-            </a>
+        
           </div>
         </div>
 

@@ -17,16 +17,19 @@ const Hero = () => {
 
         {/* Content Wrapper */}
         <div className="relative z-10 w-full px-4 sm:px-8 lg:px-12 py-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          
+
           {/* Left Content */}
           <div className="text-white text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-snug">
               Empowering Education Through Online Learning
             </h2>
-            <p className="text-sm sm:text-base md:text-lg mb-6 leading-relaxed">
-              Join Amity University Online and pursue globally recognized programs
+            <p className="text-sm sm:text-base md:text-lg mb-6 leading-relaxed ">
+              Join <a href="https://vidyarishi.com/" target="_blank" rel="noopener noreferrer ">
+                Amity University Online
+              </a> and pursue globally recognized programs
               with flexibility, world-class faculty, and industry-relevant curriculum.
             </p>
+
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
