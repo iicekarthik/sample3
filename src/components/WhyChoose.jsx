@@ -1,119 +1,124 @@
 import React from "react";
+import { FiMapPin, FiSmartphone, FiAward, FiBriefcase } from "react-icons/fi";
+import { FaRobot, FaCertificate, FaUserGraduate, FaUsers } from "react-icons/fa";
+import { MdWork, MdSchool } from "react-icons/md";
+
 
 const WhyChoose = () => {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#002147] mb-6">
+    <section className="py-20 bg-gray-100">
+      <div className="max-w-7xl mx-auto px-6 ">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#002147] mb-10 text-center">
           Why Choose Amity University Online?
         </h2>
-        <p className="text-gray-600 max-w-3xl mx-auto mb-10">
-          Amity University Online is India’s first UGC-recognized online university, 
-          offering world-class education with flexibility, innovation, and global recognition.
-        </p>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {/* Point 1 */}
-          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition ">
-            <h3 className="text-lg font-semibold text-[#002147] mb-2">
-              Globally Recognized Degrees
-            </h3>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5 ">
-              Earn UGC-entitled and internationally accredited degrees that hold value in India and abroad.
-            </p>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Graduates are equipped to pursue higher studies or global career opportunities.
+        <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-8">
+          {/* Card 1 */}
+          <div>
+            <img src="/img/wasc.png" alt="WASC" className="h-16 mb-3" />
+            <h3 className="font-semibold">WASC Accreditation (USA)</h3>
+            <p className="text-gray-600 text-sm">
+              Amity Online is India's only university accredited by WASC — a distinguished recognition of global academic excellence.
             </p>
           </div>
 
-          {/* Point 2 */}
-          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-            <h3 className="text-lg font-semibold text-[#002147] mb-2">
-              Flexible Learning
-            </h3>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Learn at your own pace with 100% online classes, recorded lectures, and interactive live sessions.
-            </p>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Customize your study schedule around work or personal commitments without missing deadlines.
+          {/* Card 2 */}
+          <div>
+            <img src="/img/wes (1).png" alt="WES" className="h-14 mb-3" />
+            <h3 className="font-semibold">WES Recognition</h3>
+            <p className="text-gray-600 text-sm">
+              Degrees recognised by WES (Canada & USA), enabling smoother pathways for higher studies and global career mobility.
             </p>
           </div>
 
-          {/* Point 3 */}
-          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-            <h3 className="text-lg font-semibold text-[#002147] mb-2">
-              Industry-Relevant Curriculum
-            </h3>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Designed with industry experts to ensure practical skills and career-ready knowledge.
-            </p>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Curriculum updates regularly to match evolving technology and market trends.
+          {/* Card 3 */}
+          <div>
+            <img src="/img/qs.webp" alt="QS" className="h-14 mb-3" />
+            <h3 className="font-semibold">QS Ranked Online MBA</h3>
+            <p className="text-gray-600 text-sm">
+              India’s only Online MBA ranked by QS Asia Pacific Top 10 for academic strength and learner outcomes.
             </p>
           </div>
 
-          {/* Point 4 */}
-          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-            <h3 className="text-lg font-semibold text-[#002147] mb-2">
-              Expert Faculty
-            </h3>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Learn from experienced professors, researchers, and industry professionals from across the globe.
-            </p>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Benefit from mentorship, guidance, and insights from leaders in your field.
+          {/* Card 4 */}
+          <div>
+            <img src="/img/qaa.webp" alt="QAA" className="h-10 mb-3" />
+            <h3 className="font-semibold">QAA (UK) Accreditation</h3>
+            <p className="text-gray-600 text-sm">
+              Accredited by the UK’s Quality Assurance Agency (QAA), assuring globally benchmarked academic quality.
             </p>
           </div>
 
-          {/* Point 5 */}
-          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-            <h3 className="text-lg font-semibold text-[#002147] mb-2">
-              Placement Assistance
-            </h3>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Career services including resume building, mock interviews, and job placement support.
-            </p>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Access exclusive job portals and networking opportunities with top employers.
+          {/* Card 5 */}
+          <div>
+            <img src="/img/the.webp" alt="Times Higher Education" className="h-10 mb-3" />
+            <h3 className="font-semibold">Times Higher Education Rankings</h3>
+            <p className="text-gray-600 text-sm">
+              Ranked among the best globally for graduate employability and employer reputation.
             </p>
           </div>
 
-          {/* Point 6 */}
-          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-            <h3 className="text-lg font-semibold text-[#002147] mb-2">
-              Global Alumni Network
-            </h3>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Join a network of 250,000+ Amity alumni working in top companies worldwide.
-            </p>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Participate in webinars, workshops, and events to stay connected and grow professionally.
+          {/* Card 6 */}
+
+          <div>
+            <FiMapPin className="text-[#002147] text-4xl mb-3" />
+            <h3 className="font-semibold">Pan-India Campus Access</h3>
+            <p className="text-gray-600 text-sm">
+              Access all Amity campuses for orientations, meetups, and convocation blending digital and real-world.
             </p>
           </div>
 
-          {/* Point 7 */}
-          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-            <h3 className="text-lg font-semibold text-[#002147] mb-2">
-              Affordable Education
-            </h3>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              High-quality programs designed to be financially accessible without compromising on standards.
-            </p>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Scholarships and flexible payment options are available to eligible students.
+          {/* Card 7 */}
+          <div>
+            <FiSmartphone className="text-[#002147] text-4xl mb-3" />
+            <h3 className="font-semibold">Amigo: Learning On-the-Go</h3>
+            <p className="text-gray-600 text-sm">
+              Learn seamlessly with live classes, track progress, and access materials anytime.
             </p>
           </div>
 
-          {/* Point 8 */}
-          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-            <h3 className="text-lg font-semibold text-[#002147] mb-2">
-              Advanced Learning Tools
-            </h3>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Use modern learning platforms, virtual labs, and digital libraries to enhance your learning experience.
+          {/* Card 8 */}
+          <div>
+            <FaRobot className="text-[#002147] text-4xl mb-3" />
+            <h3 className="font-semibold">Prof. Ami: AI-Powered Tutor</h3>
+            <p className="text-gray-600 text-sm">
+              Your personal AI mentor for doubt-solving, learning tips, and smart academic support.
             </p>
-            <p className="text-gray-600 text-sm text-justify pt-2.5 pl-2.5 pr-2.5">
-              Interactive quizzes, projects, and assignments make learning engaging and effective.
+          </div>
+
+          {/* Card 9 */}
+          <div>
+            <FaCertificate className="text-[#002147] text-4xl mb-3" />
+            <h3 className="font-semibold">Industry Certifications</h3>
+            <p className="text-gray-600 text-sm">
+              Gain in-demand certifications from top industry partners to boost your career.
+            </p>
+          </div>
+
+          {/* Card 10 */}
+          <div>
+            <MdWork className="text-[#002147] text-4xl mb-3" />
+            <h3 className="font-semibold">Internship Opportunities</h3>
+            <p className="text-gray-600 text-sm">
+              Curated internships with top companies to gain real-world experience and stand out in the job market.
+            </p>
+          </div>
+
+          {/* Card 11 */}
+          <div>
+            <FaUserGraduate className="text-[#002147] text-4xl mb-3" />
+            <h3 className="font-semibold">AI-Powered Career Platform</h3>
+            <p className="text-gray-600 text-sm">
+              From mock interviews to job search tools — ensures you’re career-ready from day one.
+            </p>
+          </div>
+
+          {/* Card 12 */}
+          <div>
+            <FaUsers className="text-[#002147] text-4xl mb-3" />
+            <h3 className="font-semibold">beSocial App for Campus Life</h3>
+            <p className="text-gray-600 text-sm">
+              A vibrant student hub for networking, joining clubs, attending events, and building connections.
             </p>
           </div>
         </div>

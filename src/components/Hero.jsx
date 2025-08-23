@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section
       className="relative bg-cover bg-center max-h-screen py-24 flex items-center"
-      style={{ backgroundImage: "url('/img/amity.png')" }}
+      style={{ backgroundImage: "url('/logo/amity.png')" }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
