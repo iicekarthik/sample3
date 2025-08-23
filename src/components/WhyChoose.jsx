@@ -6,7 +6,7 @@ import { MdWork, MdSchool } from "react-icons/md";
 
 const WhyChoose = () => {
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-6 ">
         <h2 className="text-2xl md:text-3xl font-bold text-[#002147] mb-10 text-center">
           Why Choose Amity University Online?
