@@ -7,7 +7,7 @@ const About = () => {
         About <a href="https://vidyarishi.com/" target="_blank" rel="noopener noreferrer">Amity Online</a>
       </h3>
       <p className="text-lg text-gray-700 leading-relaxed mb-4 text-w">
-        <a href="https://vidyarishi.com/" target="_blank" rel="noopener noreferrer">Amity University Online</a> is India’s first university recognized by UGC to
+        <a href="https://vidyarishi.com/contact" target="_blank" rel="noopener noreferrer">Amity University Online</a> is India’s first university recognized by UGC to
         offer online degree, diploma, and certification programs. With over 2
         decades of academic excellence, <a href="https://vidyarishi.com/" target="_blank" rel="noopener noreferrer">Amity</a> provides world-class learning
         experiences that combine innovation, technology, and industry expertise.
@@ -19,7 +19,8 @@ const About = () => {
         Management, Information Technology, Commerce, Arts & Humanities, and more.
       </p>
       <p className="text-lg text-gray-700 leading-relaxed mb-4">
-        <a href="https://vidyarishi.com/" target="_blank" rel="noopener noreferrer">Amity University Online</a> is recognized by the University Grants Commission (UGC)
+        <a href="https://vidyarishi.com/contact" target="_blank" rel="noopener noreferrer">Amity University Online</a> is recognized by the
+         <a href="https://vidyarishi.com/contact" target="_blank" rel="noopener noreferrer"> University Grants Commission (UGC)</a> 
         and the Distance Education Bureau (DEB), ensuring the validity and quality
         of its degrees. The university is accredited with an 'A+' grade by the
         National Assessment and Accreditation Council (NAAC), reflecting high
