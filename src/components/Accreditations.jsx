@@ -35,7 +35,7 @@ const recognitions = [
 
 const Accreditations = () => {
   return (
-    <section className="bg-gray-50 py-20 px-6">
+    <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
         <h3 className="text-3xl font-bold mb-12 text-[#002147]">

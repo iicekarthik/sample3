@@ -1,15 +1,16 @@
 import React from "react";
-import Header from "./components/Header";
+import Header from "./pages/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Admissions from "./components/Admissions";
-import Footer from "./components/Footer";
+import Footer from "./pages/Footer";
 import Courses from "./components/Courses";
 import WhyChoose from "./components/WhyChoose";
 import Accreditations from "./components/Accreditations";
-import CTCSection from "./components/ContactBanner";
+import CTCSection from "./contact-details/ContactBanner";
 import AmityStatsAndHighlights from "./components/AmityStatsAndHighlights";
 import FAQ from "./components/FAQ";
+import StudentTestimonials from "./components/StudentTestimonials";
 
 
 function App() {
@@ -17,15 +18,16 @@ function App() {
     <div className="font-sans bg-white">
       <Header />
       <Hero />
+      <AmityStatsAndHighlights />
       <About />
-      <AmityStatsAndHighlights/>
-      <Accreditations/>
-      <WhyChoose/>
+      <Accreditations />
       <Courses />
-      <CTCSection/>
+      <WhyChoose />
+      <CTCSection />
       <Admissions />
-      <FAQ/>
-      <Footer/>
+      <StudentTestimonials />
+      <FAQ />
+      <Footer />
     </div>
   );
 }
