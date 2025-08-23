@@ -3,23 +3,23 @@ import React from "react";
 const courses = [
   "BA General",
   "BA Vernac",
-  "BA JMC",
+  "BA Journalism and Mass Communication",
   "BBA General",
   "BBA Professional Certificate in Business Analytics",
-  "BBA Data Analysis",
+  "BBA Data Analytics",
   "Bcom General",
   "Bcom International Finance & Accounting",
-  "Bcom Hons",
+  "Bcom Honours",
   "Bcom Vernac",
   "BCA General",
   "BCA Data Engineering",
   "BCA Software Engineering",
   "BCA Cloud Security",
   "BCA Data Analytics",
-  "MA Journalism & Mass Communication (JMC)",
-  "MA Public Policy & Governance (PPG)",
+  "MA Journalism & Mass Communication",
+  "MA Public Policy & Governance",
   "Mcom Finance and Marketing",
-  "MBA General",
+  "MBA General Management",
   "MBA Marketing and Sales Management",
   "MBA Entrepreneurship and Leadership Management",
   "MBA Financial & Accounting Management",
@@ -37,13 +37,27 @@ const courses = [
   "MCA General",
   "MCA Cybersecurity",
   "MCA Software Engineering",
-  "MCA AR VR",
-  "MCA ML",
+  "MCA Augmented Reality and Virtual Reality",
+  "MCA Machine Learning",
   "MSc Data Science",
 ];
 
+// Function to convert course name -> URL slug
+const generateLink = (course) => {
+  const parts = course.split(" ");
+  const degree = parts[0].toLowerCase(); // first word = degree
+  const slug = parts
+    .slice(1)
+    .join(" ")
+    .toLowerCase()
+    .replace(/&/g, "and") // replace & with 'and'
+    .replace(/\s+/g, "-") // spaces -> hyphen
+    .replace(/[()]/g, ""); // remove brackets
+
+  return `https://vidyarishi.com/amity-university/${degree}/${slug}`;
+};
+
 const Footer = () => {
-  // Split into 3 columns for courses
   const colSize = Math.ceil(courses.length / 3);
   const col1 = courses.slice(0, colSize);
   const col2 = courses.slice(colSize, 2 * colSize);
@@ -52,17 +66,21 @@ const Footer = () => {
   return (
     <footer className="bg-[#002147] text-white text-sm mt-16">
       <div className="max-w-7xl mx-auto px-6 py-10">
-
-        {/* Courses & Disclaimer - 4 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
-
           {/* Column 1 */}
           <div>
             <h3 className="font-bold text-lg mb-4">Courses</h3>
             <ul className="space-y-2">
               {col1.map((course, index) => (
-                <li key={index} className="hover:text-[#FFCC00] cursor-pointer">
-                  {course}
+                <li key={index}>
+                  <a
+                    href={generateLink(course)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#FFCC00] cursor-pointer"
+                  >
+                    {course}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -73,8 +91,15 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4 invisible md:visible"></h3>
             <ul className="space-y-2">
               {col2.map((course, index) => (
-                <li key={index} className="hover:text-[#FFCC00] cursor-pointer">
-                  {course}
+                <li key={index}>
+                  <a
+                    href={generateLink(course)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#FFCC00] cursor-pointer"
+                  >
+                    {course}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -85,14 +110,21 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4 invisible md:visible"></h3>
             <ul className="space-y-2">
               {col3.map((course, index) => (
-                <li key={index} className="hover:text-[#FFCC00] cursor-pointer">
-                  {course}
+                <li key={index}>
+                  <a
+                    href={generateLink(course)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#FFCC00] cursor-pointer"
+                  >
+                    {course}
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 4 - Disclaimer */}
+          {/* Disclaimer */}
           <div>
             <h3 className="font-bold text-lg mb-4">Disclaimer</h3>
             <p className="text-gray-300 text-sm leading-relaxed mb-4">

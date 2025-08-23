@@ -8,6 +8,9 @@ import Courses from "./components/Courses";
 import WhyChoose from "./components/WhyChoose";
 import Accreditations from "./components/Accreditations";
 import CTCSection from "./components/ContactBanner";
+import AmityStatsAndHighlights from "./components/AmityStatsAndHighlights";
+import FAQ from "./components/FAQ";
+
 
 function App() {
   return (
@@ -15,12 +18,14 @@ function App() {
       <Header />
       <Hero />
       <About />
+      <AmityStatsAndHighlights/>
       <Accreditations/>
       <WhyChoose/>
       <Courses />
       <CTCSection/>
       <Admissions />
-      <Footer />
+      <FAQ/>
+      <Footer/>
     </div>
   );
 }

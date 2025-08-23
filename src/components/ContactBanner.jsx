@@ -6,8 +6,8 @@ const ContactBanner = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="my-16 px-6 relative">
-      <div className="bg-[#002147] rounded-3xl overflow-hidden relative flex flex-col items-center md:items-start p-10 md:p-16">
+    <section className="my-16 px-6">
+      <div className="bg-[#002147] rounded-3xl overflow-hidden relative flex flex-col justify-center items-center p-10 md:p-16 min-h-[400px]">
 
         {/* Top-left decorative gradient */}
         <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400 rounded-full opacity-20 blur-3xl pointer-events-none"></div>
@@ -16,7 +16,7 @@ const ContactBanner = () => {
         <div className="absolute -bottom-10 -right-10 w-52 h-52 bg-[#FFCC00] rounded-full opacity-30 blur-3xl pointer-events-none"></div>
 
         {/* Content */}
-        <div className="text-center md:text-left">
+        <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Connect with Amity Online University
           </h2>

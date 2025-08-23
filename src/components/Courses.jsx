@@ -1,22 +1,21 @@
 import React from "react";
 import { GoArrowRight } from "react-icons/go";
 
-// Add image URLs (replace with actual paths or URLs)
 const courses = [
-  { name: "MBA", img: "/courses/mba.webp" },
-  { name: "MCA", img: "/courses/mca.webp" },
-  { name: "MA", img: "/courses/ma.jpg" },
-  { name: "M.Com", img: "/courses/mcom.webp" },
-  { name: "M.Sc", img: "/courses/msc.webp" },
-  { name: "B.Com", img: "/courses/bcom.webp" },
-  { name: "BA", img: "/courses/ba.webp" },
-  { name: "BCA", img: "/courses/bca.webp" },
-  { name: "BBA", img: "/courses/bba.webp" },
+  { name: "MBA", img: "/courses/mba.webp", link: "https://vidyarishi.com/amity-university/mba" },
+  { name: "MCA", img: "/courses/mca.webp", link: "https://vidyarishi.com/amity-university/mca" },
+  { name: "MA", img: "/courses/ma.jpg", link: "https://vidyarishi.com/amity-university/ma" },
+  { name: "M.Com", img: "/courses/mcom.webp", link: "https://vidyarishi.com/amity-university/mcom" },
+  { name: "M.Sc", img: "/courses/msc.webp", link: "https://vidyarishi.com/amity-university/msc" },
+  { name: "B.Com", img: "/courses/bcom.webp", link: "https://vidyarishi.com/amity-university/bcom" },
+  { name: "BA", img: "/courses/ba.webp", link: "https://vidyarishi.com/amity-university/ba" },
+  { name: "BCA", img: "/courses/bca.webp", link: "https://vidyarishi.com/amity-university/bca" },
+  { name: "BBA", img: "/courses/bba.webp", link: "https://vidyarishi.com/amity-university/bba" },
 ];
 
 const Courses = () => {
   return (
-    <section id="course" className="bg-gray-100 py-20 px-6">
+    <section id="course" className="bg-gray-50 py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
         <h3 className="text-3xl font-bold mb-10 text-[#002147]">
@@ -47,7 +46,7 @@ const Courses = () => {
 
               {/* Learn More button */}
               <a
-                href="https://vidyarishi.com/amity-university"
+                href={course.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#002147] text-white px-5 py-2 rounded-full hover:bg-[#1a3a6d] transition"
