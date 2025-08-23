@@ -70,7 +70,6 @@ const EnquiryForm = ({ onClose, showClose }) => {
     { code: "+595", country: "Paraguay" },
     { code: "+591", country: "Bolivia" },
     { code: "+58", country: "Venezuela" },
-
   ];
 
   // UG & PG Courses
@@ -182,7 +181,7 @@ const EnquiryForm = ({ onClose, showClose }) => {
               Program Level *
             </label>
             <select
-              name="level"  // ✅ matches formData.level
+              name="level"  
               value={formData.level}
               onChange={handleChange}
               required

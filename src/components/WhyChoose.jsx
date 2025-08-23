@@ -24,7 +24,7 @@ const WhyChoose = () => {
 
           {/* Card 2 */}
           <div>
-            <img src="/img/wes (1).png" alt="WES" className="h-14 mb-3" />
+            <img src="/img/wes.png" alt="WES" className="h-14 mb-3" />
             <h3 className="font-semibold">WES Recognition</h3>
             <p className="text-gray-600 text-sm">
               Degrees recognised by WES (Canada & USA), enabling smoother pathways for higher studies and global career mobility.
@@ -33,7 +33,7 @@ const WhyChoose = () => {
 
           {/* Card 3 */}
           <div>
-            <img src="/img/qs.webp" alt="QS" className="h-14 mb-3" />
+            <img src="/img/qs.png" alt="QS" className="h-14 mb-3" />
             <h3 className="font-semibold">QS Ranked Online MBA</h3>
             <p className="text-gray-600 text-sm">
               India’s only Online MBA ranked by QS Asia Pacific Top 10 for academic strength and learner outcomes.
@@ -42,7 +42,7 @@ const WhyChoose = () => {
 
           {/* Card 4 */}
           <div>
-            <img src="/img/qaa.webp" alt="QAA" className="h-10 mb-3" />
+            <img src="/img/qaa.png" alt="QAA" className="h-10 mb-3" />
             <h3 className="font-semibold">QAA (UK) Accreditation</h3>
             <p className="text-gray-600 text-sm">
               Accredited by the UK’s Quality Assurance Agency (QAA), assuring globally benchmarked academic quality.
@@ -51,7 +51,7 @@ const WhyChoose = () => {
 
           {/* Card 5 */}
           <div>
-            <img src="/img/the.webp" alt="Times Higher Education" className="h-10 mb-3" />
+            <img src="/img/the.png" alt="Times Higher Education" className="h-10 mb-3" />
             <h3 className="font-semibold">Times Higher Education Rankings</h3>
             <p className="text-gray-600 text-sm">
               Ranked among the best globally for graduate employability and employer reputation.

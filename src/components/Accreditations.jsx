@@ -19,7 +19,7 @@ const recognitions = [
   {
     title: "WES Accredited",
     desc: "Recognized by World Education Services (WES) for global acceptance of degrees.",
-    logo: "/img/wes (1).png",
+    logo: "/img/wes.png",
   },
     {
     title: "AIU Recognized",
