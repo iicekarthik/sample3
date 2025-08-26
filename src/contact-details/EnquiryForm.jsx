@@ -181,7 +181,7 @@ const EnquiryForm = ({ onClose, showClose }) => {
               Program Level *
             </label>
             <select
-              name="level"  
+              name="level"
               value={formData.level}
               onChange={handleChange}
               required
@@ -226,10 +226,10 @@ const EnquiryForm = ({ onClose, showClose }) => {
             required
             className="mt-1"
           />
-         <span className="text-gray-600 text-xs leading-relaxed">
-    I agree that associates can contact me via Email, SMS, WhatsApp, and Voice calls 
-    as per the Privacy Policy. This consent overrides any DNC/NDNC registration.
-  </span>
+          <span className="text-gray-600 text-xs leading-relaxed">
+            I agree that associates can contact me via Email, SMS, WhatsApp, and Voice calls
+            as per the Privacy Policy. This consent overrides any DNC/NDNC registration.
+          </span>
         </div>
 
         {/* Submit */}
