@@ -97,146 +97,134 @@ const EnquiryForm = ({ onClose, showClose }) => {
   };
 
   return (
-    <div className="relative bg-white rounded-2xl p-6 shadow-lg max-w-md w-full">
-      {/* Close button only if showClose is true */}
-      {showClose && (
-        <button
-          onClick={onClose}
-          className="absolute top-3 right-3 text-gray-600 hover:text-red-500 text-lg"
-        >
-          ✕
-        </button>
-      )}
+<div className="enquiry-form">
+  {/* Close button only if showClose is true */}
+  {showClose && (
+    <button onClick={onClose} className="close-btn">
+      ✕
+    </button>
+  )}
 
-      {/* Heading */}
-      <h3 className="text-xl font-semibold text-center mb-6">Enquiry Now</h3>
+  {/* Heading */}
+  <h3 className="form-title">Enquiry Now</h3>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+     <form onSubmit={handleSubmit} className="form-body">
 
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Enter full name"
-              required
-              className="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm focus:ring-2 focus:ring-yellow-400 outline-none"
-            />
-          </div>
+  <div className="form-row-2">
+    <div>
+      <label>Full Name *</label>
+      <input
+        type="text"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        placeholder="Enter full name"
+        required
+        className="form-input"
+      />
+    </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="abc@xyz.com"
-              required
-              className="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm focus:ring-2 focus:ring-yellow-400 outline-none"
-            />
-          </div>
-        </div>
+    <div>
+      <label>Email *</label>
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        placeholder="abc@xyz.com"
+        required
+        className="form-input"
+      />
+    </div>
+  </div>
 
+<div>
+  <label>Phone *</label>
+  <div className="phone-input">
+    {/* Country Code Selector */}
+    <select
+      name="countryCode"
+      value={formData.countryCode}
+      onChange={handleChange}
+      className="country-code"
+    >
+      {countryCodes.map((c, idx) => (
+        <option key={idx} value={c.code}>
+          {c.code}
+        </option>
+      ))}
+    </select>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Phone *
-          </label>
-          <div className="flex border border-gray-300 rounded-xl overflow-hidden">
-            {/* Country Code Selector */}
-            <select
-              name="countryCode"
-              value={formData.countryCode}
-              onChange={handleChange}
-              className="px-2 py-2 text-sm bg-gray-50 border-r border-gray-300 outline-none"
-            >
-              {countryCodes.map((c, idx) => (
-                <option key={idx} value={c.code}>
-                  {c.code}
-                </option>
-              ))}
-            </select>
+    {/* Phone Number Input */}
+    <input
+      type="tel"
+      name="phone"
+      value={formData.phone}
+      onChange={handleChange}
+      placeholder="Enter phone number"
+      required
+      className="phone-number"
+    />
+  </div>
+</div>
 
-            {/* Phone Number Input */}
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="Enter phone number"
-              required
-              className="w-full px-3 py-2 text-sm outline-none"
-            />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Program Level */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Program Level *
-            </label>
-            <select
-              name="level"
-              value={formData.level}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm bg-white focus:ring-2 focus:ring-yellow-400 outline-none"
-            >
-              <option value="">Select Level</option>
-              <option value="UG">UG</option>
-              <option value="PG">PG</option>
-            </select>
-          </div>
+<div className="form-row">
+  {/* Program Level */}
+  <div>
+    <label>Program Level *</label>
+    <select
+      name="level"
+      value={formData.level}
+      onChange={handleChange}
+      required
+      className="program-select"
+    >
+      <option value="">Select Level</option>
+      <option value="UG">UG</option>
+      <option value="PG">PG</option>
+    </select>
+  </div>
 
           {/* Program Course */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Program Course *
-            </label>
-            <select
-              name="course"
-              value={formData.course}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm bg-white focus:ring-2 focus:ring-yellow-400 outline-none"
-            >
-              <option value="">Select Course</option>
-              {formData.level &&
-                courses[formData.level].map((course, idx) => (
-                  <option key={idx} value={course}>
-                    {course}
-                  </option>
-                ))}
-            </select>
-          </div>
+    <div>
+  <label>Program Course *</label>
+  <select
+    name="course"
+    value={formData.course}
+    onChange={handleChange}
+    required
+    className="program-select"
+  >
+    <option value="">Select Course</option>
+    {formData.level &&
+      courses[formData.level].map((course, idx) => (
+        <option key={idx} value={course}>
+          {course}
+        </option>
+      ))}
+  </select>
+</div>
+
         </div>
 
-        {/* Consent */}
-        <div className="flex items-start gap-2 text-sm">
-          <input
-            type="radio"
-            name="consent"
-            checked={formData.consent}
-            onChange={handleChange}
-            required
-            className="mt-1"
-          />
-          <span className="text-gray-600 text-xs leading-relaxed">
-            I agree that associates can contact me via Email, SMS, WhatsApp, and Voice calls
-            as per the Privacy Policy. This consent overrides any DNC/NDNC registration.
-          </span>
-        </div>
+  {/* Consent */}
+<div className="consent-box">
+  <input
+    type="radio"
+    name="consent"
+    checked={formData.consent}
+    onChange={handleChange}
+    required
+  />
+  <span>
+    I agree that associates can contact me via Email, SMS, WhatsApp, and Voice calls
+    as per the Privacy Policy. This consent overrides any DNC/NDNC registration.
+  </span>
+</div>
 
-        {/* Submit */}
-        <button
-          type="submit"
-          className="w-full bg-[#002147] text-white py-3 rounded-xl font-semibold hover:bg-[#1a3a6d] transition"
-        >
+
+          {/* Submit */}
+        <button type="submit" className="submit-btn">
           SUBMIT
         </button>
       </form>

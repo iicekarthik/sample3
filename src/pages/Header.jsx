@@ -8,50 +8,47 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="p-4 md:p-6">
-      <header className="bg-[#002147] text-white shadow-md w-full rounded-2xl">
-        <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+    <div className="header-container">
+      <header className="header">
+        <div className="header-inner">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <img
-              src="/logo/amitylogo.png"
-              alt="Amity University Logo"
-              className="h-10 md:h-12"
-            />
+          <div className="logo">
+            <img src="/logo/amitylogo.png" alt="Amity University Logo" />
           </div>
 
           {/* Desktop CTA */}
-          <nav className="hidden md:flex">
+          <nav className="desktop-nav">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-[#FFCC00] text-[#002147] font-semibold rounded-full px-6 py-3 text-sm flex items-center gap-2 hover:bg-yellow-400 transition duration-300"
+              className="enquire-btn"
             >
               <span>Enquire Now</span>
-              <GoArrowRight className="text-lg" />
+              <GoArrowRight className="icon" />
             </button>
           </nav>
 
           {/* Mobile Menu Button */}
+
           <button
-            className="md:hidden text-2xl focus:outline-none"
+            className="mobile-menu-btn"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
 
-        {/* Mobile Menu (slide-down) */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-[#002147] px-6 pb-4 animate-slideDown">
+          <div className="mobile-menu">
             <button
               onClick={() => {
                 setIsModalOpen(true);
                 setIsMenuOpen(false);
               }}
-              className="w-full bg-[#FFCC00] text-[#002147] font-semibold rounded-full px-6 py-3 text-sm flex items-center justify-center gap-2 hover:bg-yellow-400 transition duration-300"
+              className="enquire-btn full-width"
             >
               <span>Enquire Now</span>
-              <GoArrowRight className="text-lg" />
+              <GoArrowRight className="icon" />
             </button>
           </div>
         )}

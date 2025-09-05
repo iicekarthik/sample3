@@ -11,7 +11,7 @@ import CTCSection from "./contact-details/ContactBanner";
 import AmityStatsAndHighlights from "./components/AmityStatsAndHighlights";
 import FAQ from "./components/FAQ";
 import StudentTestimonials from "./components/StudentTestimonials";
-
+import "./App.css";
 
 function App() {
   return (

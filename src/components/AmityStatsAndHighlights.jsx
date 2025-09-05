@@ -1,12 +1,13 @@
 import React from "react";
 
+
 const AmityStatsAndHighlights = () => {
   const highlights = [
     {
       title: "Emerging\nSpecializations",
       desc:
         "New-age specializations\nshaping tomorrow's business\nlandscape",
-      img: "/highlights/specialization.png", 
+      img: "/highlights/specialization.png",
       alt: "Emerging Specializations",
     },
     {
@@ -33,64 +34,56 @@ const AmityStatsAndHighlights = () => {
   ];
 
   return (
-    <section className="py-20">
-      <div className="  px-6 lg:px-12 space-y-12">
-        {/* Stats*/}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="bg-[#FFCC00] text-[#002147] rounded-xl p-6 text-center">
-            <div className="text-4xl md:text-5xl font-extrabold">30+</div>
-            <div className="mt-2 font-medium">Years Of Excellence</div>
+    <section className="stats-section">
+      <div className="stats-container">
+        {/* Stats */}
+        <div className="stats-grid">
+          <div className="stat-box yellow">
+            <div className="stat-number">30+</div>
+            <div className="stat-label">Years Of Excellence</div>
           </div>
-          <div className="bg-[#28a745] rounded-xl p-6 text-center">
-            <div className="text-white text-4xl md:text-5xl font-extrabold">60+</div>
-            <div className="mt-2 text-[#002147] font-medium">Programs &amp; Specializations</div>
+          <div className="stat-box green">
+            <div className="stat-number white">60+</div>
+            <div className="stat-label dark">Programs &amp; Specializations</div>
           </div>
-          <div className="bg-[#007bff] rounded-xl p-6 text-center">
-            <div className="text-white text-4xl md:text-5xl font-extrabold">1.60 Lac+</div>
-            <div className="mt-2 text-[#002147] font-medium">Learners</div>
+          <div className="stat-box blue">
+            <div className="stat-number white">1.60 Lac+</div>
+            <div className="stat-label dark">Learners</div>
           </div>
-          <div className="bg-[#e83e8c] rounded-xl p-6 text-center">
-            <div className="text-white text-4xl md:text-5xl font-extrabold">3.5L+</div>
-            <div className="mt-2 text-[#002147] font-medium">Strong Alumni Network</div>
+          <div className="stat-box pink">
+            <div className="stat-number white">3.5L+</div>
+            <div className="stat-label dark">Strong Alumni Network</div>
           </div>
         </div>
 
-        {/*Program Highlights*/}
-        <div className="bg-white rounded-2xl shadow-md p-8 md:p-10">
-        
-          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-            <h2 className="font-serif text-[28px] md:text-[34px] leading-tight text-[#0f2b54]">
-              Program Highlights And<br />Advantages
+        {/* Program Highlights */}
+        <div className="highlights-box">
+          <div className="highlights-header">
+            <h2 className="highlights-title">
+              Program Highlights And <br /> Advantages
             </h2>
-            <p className="text-gray-600 max-w-md md:text-right">
-              Discover our Online Degree Programs and<br />
+            <p className="highlights-desc">
+              Discover our Online Degree Programs and <br />
               begin an exciting educational journey
             </p>
           </div>
 
-          {/* thin divider */}
-          <hr className="mt-6 mb-8 border-gray-200" />
+          <hr className="divider" />
 
-          {/* highlight items with vertical dividers on md+ */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+          <div className="highlights-grid">
             {highlights.map((h, idx) => (
               <div
                 key={h.alt}
-                className={`flex flex-col text-center px-6 py-4
-                ${idx > 0 ? "md:border-l md:border-gray-200" : ""}`}
+                className={`highlight-item ${idx > 0 ? "with-border" : ""}`}
               >
                 <img
                   src={h.img}
                   alt={h.alt}
-                  className="h-12 w-12 mb-3 object-contain "
+                  className="highlight-img"
                   loading="lazy"
                 />
-                <h3 className="text-[#0f2b54] text-justify font-bold ">
-                  {h.title}
-                </h3>
-                <p className="text-gray-500 text-justify  text-lg mt-3 whitespace-pre-line">
-                  {h.desc}
-                </p>
+                <h3 className="highlight-title">{h.title}</h3>
+                <p className="highlight-text">{h.desc}</p>
               </div>
             ))}
           </div>

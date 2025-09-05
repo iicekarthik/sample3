@@ -21,7 +21,7 @@ const recognitions = [
     desc: "Recognized by World Education Services (WES) for global acceptance of degrees.",
     logo: "/img/wes.png",
   },
-    {
+  {
     title: "AIU Recognized",
     desc: "Degrees awarded by Amity University Online are recognized by the Association of Indian Universities (AIU), ensuring global acceptability.",
     logo: "/img/aiu.png",
@@ -35,33 +35,29 @@ const recognitions = [
 
 const Accreditations = () => {
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-6xl mx-auto text-center">
+    <section className="accreditations-section">
+      <div className="accreditations-container">
         {/* Heading */}
-        <h3 className="text-3xl font-bold mb-12 text-[#002147]">
+        <h3 className="accreditations-heading">
           Accreditations & Recognitions
         </h3>
 
         {/* Recognition Cards */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <div className="accreditations-grid">
           {recognitions.map((item, idx) => (
-            <div
-              key={idx}
-              className="shadow-lg rounded-2xl p-6 bg-gray-50 hover:bg-white hover:shadow-xl transition flex flex-col items-center text-center"
-            >
+            <div key={idx} className="accreditation-card">
               {/* Logo */}
               <img
                 src={item.logo}
                 alt={item.title}
-                className="h-24 mb-4 object-contain"
+                className="accreditation-logo"
               />
 
               {/* Title */}
-              <h4 className="text-lg font-semibold mb-2 text-[#002147]">
-                {item.title}
-              </h4>
+              <h4 className="accreditation-title">{item.title}</h4>
+
               {/* Description */}
-              <p className="text-gray-600 text-sm">{item.desc}</p>
+              <p className="accreditation-desc">{item.desc}</p>
             </div>
           ))}
         </div>

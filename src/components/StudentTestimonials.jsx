@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const testimonials = [
   {
     name: "Ajimsha Puthur Abdul Hameed",
@@ -17,44 +18,33 @@ const testimonials = [
 
 const StudentTestimonials = () => {
   return (
-    <section className="py-16  bg-gray-100">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+    <section className="testimonials-section">
+      <div className="testimonials-container">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-[#002147] mb-4">
+        <h2 className="testimonials-heading">
           Hear From Our Students And Where They Are Placed
         </h2>
-        <p className="text-gray-600 mb-12 max-w-2xl mx-auto text-base md:text-lg">
+        <p className="testimonials-subtitle">
           Discover the real-world impact of our education. From our students and
           alumni, learn about their thriving careers today!
         </p>
 
         {/* Testimonials */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="testimonials-grid">
           {testimonials.map((t, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center p-8 text-center"
-            >
+            <div key={index} className="testimonial-card">
               {/* Image */}
-              <div className="w-24 h-24 md:w-28 md:h-28 mb-6">
-                <img
-                  src={t.img}
-                  alt={t.name}
-                  className="w-full h-full rounded-full object-cover border-4 border-[#FFCC00] shadow-md"
-                />
+              <div className="testimonial-img-wrapper">
+                <img src={t.img} alt={t.name} className="testimonial-img" />
               </div>
 
               {/* Text */}
-              <p className="text-gray-700 italic mb-6 text-sm md:text-base leading-relaxed">
-                “{t.text}”
-              </p>
+              <p className="testimonial-text">“{t.text}”</p>
 
               {/* Name + Course */}
               <div>
-                <h4 className="font-semibold text-lg text-[#002147]">
-                  {t.name}
-                </h4>
-                <p className="text-sm text-gray-500">{t.course}</p>
+                <h4 className="testimonial-name">{t.name}</h4>
+                <p className="testimonial-course">{t.course}</p>
               </div>
             </div>
           ))}
